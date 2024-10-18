@@ -13,20 +13,26 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: pkc-12576z.us-west2.gcp.confluent.cloud:9092
     consumer:
       group-id: driver_group
       auto-offset-reset: earliest
-
+    properties:
+      security.protocol: SASL_SSL
+      sasl.mechanism: PLAIN
+      sasl.jaas.config: |
+        org.apache.kafka.common.security.plain.PlainLoginModule required
+        username="FZ6FABCQNGM3G34V"   # Replace with your Confluent Cloud API key
+        password="kCqzMdgRr/Svwp+Q/6xMv2BZHxl1ucLpWsTQddTKjYLaI9na3IuPnnyqiOz2GJA4"; # Replace with your Confluent Cloud API secret
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://project-natal-2.onrender.com
+
 logging:
   level:
     org.springframework.web: DEBUG       # Enables detailed logging for Spring Web requests
     org.springframework.security: DEBUG  # Enables detailed logging for Spring Security
-
-

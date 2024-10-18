@@ -17,4 +17,4 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: https://project-natal-2.onrender.com
