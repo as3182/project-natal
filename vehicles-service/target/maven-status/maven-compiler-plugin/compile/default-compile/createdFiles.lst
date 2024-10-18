@@ -1,0 +1,7 @@
+com\goodstransport\vehicles\controller\VehicleController.class
+com\goodstransport\vehicles\model\Vehicles.class
+com\goodstransport\vehicles\VehiclesServiceApplication.class
+com\goodstransport\vehicles\repository\VehicleRepository.class
+com\goodstransport\vehicles\service\VehicleServiceImpl.class
+com\goodstransport\vehicles\service\VehicleService.class
+com\goodstransport\vehicles\config\WebClientConfig.class
